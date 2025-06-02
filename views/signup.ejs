@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up | Todolist</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/todo-logo.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="/"
+            ><img src="./img/todo-logo.png" alt="todolist logo" /> Goal
+            Reacher</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <% if (messages.errors && messages.errors.length) { %> <%
+    messages.errors.forEach(el => { %>
+    <div class="flash-message"><%= el.message %></div>
+    <% }) %> <% } %>
+
+    <form action="/signup" method="post" id="signup-form">
+      <div class="container">
+        <h1>Sign Up</h1>
+
+        <div class="form-control">
+          <input type="text" name="userName" placeholder="User Name" required />
+        </div>
+
+        <div class="form-control">
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="form-control">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="form-control">
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn submit-btn">Sign Up</button>
+      </div>
+    </form>
+  </body>
+</html>

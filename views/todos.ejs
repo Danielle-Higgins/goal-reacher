@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/todo-logo.png" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body id="todo-body">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#"
+            ><img src="./img/todo-logo.png" alt="todolist logo" /> Goal
+            Reacher</a
+          >
+        </div>
+
+        <a href="/logout" class="btn logout-btn">Logout</a>
+      </div>
+    </header>
+
+    <main class="todo-content">
+      <div class="container">
+        <h1>Todo List</h1>
+
+        <h2>
+          <%= user.userName.charAt(0).toUpperCase() + user.userName.slice(1) %>
+          has <%= left %> thing(s) left to do
+        </h2>
+
+        <div class="wrapper">
+          <form action="/todos/createTodo" method="post" id="todo-form">
+            <input
+              type="text"
+              name="todoItem"
+              placeholder="Enter Todo Item"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" class="btn add-btn">ADD</button>
+          </form>
+
+          <ul class="todo-list" id="todo-list">
+            <% todos.forEach((el, index) => { %>
+            <li class="todo-item" data-id="<%=el._id%>">
+              <!-- create custom checkbox -->
+              <input type="checkbox" id="todo-<%=index+1%>" class="checkbox" <%=
+              el.completed === true ? "checked" : "" %> />
+              <label class="custom-checkbox" for="todo-<%=index+1%>"
+                ><i class="fa-solid fa-check"></i
+              ></label>
+
+              <label
+                class="todo-text <%= el.completed === true ? 'completed' : 'not'%>"
+                for="todo-<%=index+1%>"
+                ><%=el.todo%></label
+              >
+              <button class="del-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

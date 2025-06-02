@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* ----- Base Styles ----- */
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: rgb(212, 205, 201);
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ----- Main Page Styles ----- */
+.header {
+  width: 100%;
+  padding: 30px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .logo a:hover {
+  transform: scale(1.05);
+}
+
+.header .logo img {
+  width: 50px;
+}
+
+.header .logout-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.header .logout-btn:hover {
+  transform: scale(1.05);
+}
+
+.main-content {
+  padding: 50px 20px 90px;
+}
+
+.main-content .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+}
+
+.main-content .col-left p {
+  margin-bottom: 10px;
+}
+
+.main-content .col-left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+.main-content .col-left .signup {
+  margin: 10px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.main-content .col-left .account {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-content .col-left .login {
+  background-color: #fff;
+  padding: 8px 15px;
+}
+
+.main-content .col-right img {
+  width: 600px;
+}
+
+.main-content .col-right p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main-content .col-right p span {
+  font-weight: 600;
+}
+
+/* ----- Login/Signup Styles ----- */
+#login-form,
+#signup-form {
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form .container {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 440px;
+  min-height: 70vh;
+}
+
+form h1 {
+  text-align: center;
+  margin: 20px 0 40px 0;
+  font-size: 4rem;
+  font-weight: 600px;
+}
+
+.form-control input {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  font-size: 1.6rem;
+  font: inherit;
+  color: #000;
+  border: 0;
+  outline: 0;
+  padding: 0 25px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.05);
+}
+
+.form-control input::placeholder {
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 500;
+}
+
+form .submit-btn {
+  margin-top: 40px;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+
+form .submit-btn:hover {
+  transform: scale(1.05);
+}
+
+form .sign-up-link {
+  text-align: center;
+  margin-top: 25px;
+}
+
+form .sign-up-link a {
+  font-weight: 600;
+}
+
+form .sign-up-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Todo Styles ----- */
+.todo-content {
+  padding: 50px 20px 90px;
+}
+
+.todo-content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-content h1 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}
+
+.todo-content .wrapper {
+  width: 700px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-content .wrapper form {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-content .wrapper form input {
+  flex: 1;
+  height: 60px;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font: inherit;
+  color: #000;
+  border: 0;
+  outline: 0;
+  padding: 0 25px;
+  border-radius: 30px;
+  border: 2px solid black;
+}
+
+.todo-content .wrapper form input::placeholder {
+  color: #000;
+  font: inherit;
+}
+
+.btn.add-btn {
+  background-color: rgb(77, 148, 247);
+  color: #fff;
+  padding: 0 30px;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  font: inherit;
+  font-weight: 600;
+}
+
+.todo-content .todo-item {
+  margin-bottom: 10px;
+  padding: 0 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.todo-content .todo-text {
+  padding: 15px;
+  padding-right: 0;
+  flex: 1;
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+
+.del-btn {
+  background: none;
+  border: none;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.del-btn i {
+  font-size: 20px;
+}
+
+.del-btn:hover {
+  color: #ff0033;
+}
+
+.custom-checkbox {
+  border: 2px solid #000;
+  border-radius: 50%;
+  min-width: 25px;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox i {
+  color: #fff;
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox {
+  background-color: black;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox i {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+}
+
+.todo-text.not {
+  text-decoration: none;
+}
+
+/* ----- Utility Classes ----- */
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 15px;
+  /* border: 2px solid white; */
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid transparent;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.flash-message {
+  text-align: center;
+  color: red;
+  background-color: #fdd;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ----- Media Queries ----- */
+@media screen and (max-width: 1000px) {
+  /* Main Page */
+  .main-content .container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .main-content .col-left h1 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Main Page */
+  .header .container {
+    justify-content: center;
+  }
+
+  .main-content .container {
+    text-align: center;
+  }
+
+  .main-content .col-left h1 {
+    font-size: 3rem;
+  }
+
+  /* Todo Page */
+  #todo-body .header .container {
+    justify-content: space-between;
+  }
+
+  #todo-body .header .logo a {
+    font-size: 1.8rem;
+  }
+
+  #todo-body .header .logo img {
+    width: 25px;
+  }
+
+  #todo-body .header .logout-btn {
+    padding: 8px 10px;
+  }
+
+  .todo-content h1 {
+    margin-top: 0;
+    font-size: 3.5rem;
+  }
+
+  .todo-content .wrapper form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .todo-content .wrapper form input {
+    min-height: 60px;
+  }
+
+  .btn.add-btn {
+    width: 100%;
+    min-height: 60px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  /* Main Page */
+  .main-content .col-left .signup {
+    display: block;
+  }
+
+  .main-content .col-left .account {
+    display: block;
+  }
+
+  .main-content .col-left .login {
+    display: block;
+    margin-top: 10px;
+  }
+}
