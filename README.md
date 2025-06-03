@@ -1,5 +1,9 @@
 # Goal Reacher: <a href="https://goal-reacher.onrender.com/" target="_blank">Visit Here</a>
 
+<p>
+  <img src="https://github.com/Danielle-Higgins/goal-reacher/blob/main/public/img/preview-img.png">
+</p>
+
 I know I know, another todo list project. But this time we are building a Full-Stack todo list utilizing the MVC Architecture! This project is called Goal Reacher where you can keep track of the things you need to get done.
 
 ## Tech Used
